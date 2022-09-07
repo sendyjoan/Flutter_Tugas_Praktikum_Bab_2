@@ -119,23 +119,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          color: Colors.amberAccent,
-                          padding: EdgeInsets.all(10),
-                          alignment: Alignment.bottomLeft,
-                          child: Column(
-                            children: [
-                              Text("data"),
-                              Text("data"),
-                              Text("data"),
-                            ],
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: <Widget>[
+                          Text("Bagian ini akan diisi oleh Gambar"),
+                          Container(
+                            padding: EdgeInsets.all(10),
+                            color: Colors.white,
+                            child: Text(
+                              "JUVENTUS MELAWAN AC MILAN",
+                              textAlign: TextAlign.center,
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            width: 360,
                           ),
-                          width: 375,
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.all(5),
+                            alignment: Alignment.bottomLeft,
+                            child: Text(
+                              "Transfer",
+                            ),
+                          )
+                        ],
+                      ),
+                      color: Colors.amberAccent,
+                      height: 200,
+                      width: 375,
                     ),
                   ],
                 ),
