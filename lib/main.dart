@@ -103,14 +103,38 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: <Widget>[
                         Container(
                           padding: EdgeInsets.all(20),
-                          color: Colors.blue,
-                          child: Text('Data'),
+                          child: Text('BERTIA TERBARU'),
                         ),
                       ],
                     ),
                     Column(
-                      children: [
-                        Text("data"),
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.all(20),
+                          child: Text('PERTANDINGAN HARI INI'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: <Widget>[
+                        Container(
+                          color: Colors.amberAccent,
+                          padding: EdgeInsets.all(10),
+                          alignment: Alignment.bottomLeft,
+                          child: Column(
+                            children: [
+                              Text("data"),
+                              Text("data"),
+                              Text("data"),
+                            ],
+                          ),
+                          width: 375,
+                        ),
                       ],
                     ),
                   ],
