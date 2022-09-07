@@ -95,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           children: <Widget>[
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -121,10 +122,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: EdgeInsets.all(2),
+                      color: Colors.amberAccent,
+                      width: 375,
                       child: Column(
                         children: <Widget>[
-                          Text("Bagian ini akan diisi oleh Gambar"),
+                          Image(
+                            image: NetworkImage(
+                                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+                          ),
                           Container(
                             padding: EdgeInsets.all(10),
                             color: Colors.white,
@@ -134,10 +140,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               style:
                                   const TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            width: 360,
+                            width: 373,
                           ),
                           Container(
-                            padding: EdgeInsets.all(5),
+                            padding: EdgeInsets.all(10),
                             alignment: Alignment.bottomLeft,
                             child: Text(
                               "Transfer",
@@ -145,9 +151,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                         ],
                       ),
-                      color: Colors.amberAccent,
-                      height: 200,
-                      width: 375,
                     ),
                   ],
                 ),
