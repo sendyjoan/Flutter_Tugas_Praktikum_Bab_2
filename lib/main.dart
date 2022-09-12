@@ -97,67 +97,135 @@ class _MyHomePageState extends State<MyHomePage> {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(20),
-                          child: Text('BERTIA TERBARU'),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Container(
-                          padding: EdgeInsets.all(20),
-                          child: Text('PERTANDINGAN HARI INI'),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(2),
-                      color: Colors.amberAccent,
-                      width: 375,
-                      child: Column(
-                        children: <Widget>[
-                          Image(
-                            image: NetworkImage(
-                                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            color: Colors.white,
-                            child: Text(
-                              "JUVENTUS MELAWAN AC MILAN",
-                              textAlign: TextAlign.center,
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            width: 373,
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(10),
-                            alignment: Alignment.bottomLeft,
-                            child: Text(
-                              "Transfer",
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+                NewsTab(),
+                HeadlineNews(),
               ],
-            )
+            ),
+            WidgetNews(),
+            WidgetNews(),
+            WidgetNews(),
+            WidgetNews(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class HeadlineNews extends StatelessWidget {
+  const HeadlineNews({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.all(2),
+          color: Colors.amberAccent,
+          width: 375,
+          child: Column(
+            children: <Widget>[
+              Image(
+                image: NetworkImage(
+                    'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                color: Colors.white,
+                child: Text(
+                  "JUVENTUS MELAWAN AC MILAN",
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+                width: 373,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                alignment: Alignment.bottomLeft,
+                child: Text(
+                  "Transfer",
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class NewsTab extends StatelessWidget {
+  const NewsTab({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text('BERTIA TERBARU'),
+            ),
+          ],
+        ),
+        Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Text('PERTANDINGAN HARI INI'),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class WidgetNews extends StatelessWidget {
+  const WidgetNews({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(5.0),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.green),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.green),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Image.network(
+                      "https://cdn-2.tstatic.net/batam/foto/bank/images/ilustrasi-harimau_20160413_175548.jpg"),
+                ),
+                Expanded(
+                  child: Text(
+                    "Macan mengamuk diperkampungan warga",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Text(
+              "Sebuah video yang dibagikan secara luas d internet menunjukkan klip seorang wanita gendong macan layaknya balita yang sedang ngamuk."),
+        ],
       ),
     );
   }
