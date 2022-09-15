@@ -216,7 +216,7 @@ class WidgetNews extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "Macan mengamuk diperkampungan warga",
+                    "Macan mengamuk diperkampungan Warga",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -224,7 +224,7 @@ class WidgetNews extends StatelessWidget {
             ),
           ),
           Text(
-              "Sebuah video yang dibagikan secara luas d internet menunjukkan klip seorang wanita gendong macan layaknya balita yang sedang ngamuk."),
+              "Sebuah video yang dibagikan secara luas di internet menunjukkan klip seorang wanita gendong macan layaknya balita yang sedang ngamuk."),
         ],
       ),
     );
